@@ -1,0 +1,127 @@
+﻿class Movie{
+constructor(title,studio,rating="PG"){
+this.title=title;
+this.studio=studio;
+this.rating=rating;
+}
+getPG(title){
+var flims = [
+{
+"Title": "Avatar",
+"Year": "2009",
+"Rated": "PG13",
+"Studio": "A"
+},
+{
+"Title": "I Am Legend",
+"Year": "2007",
+"Rated": "PG13",
+"Studio": "B"
+},
+{
+"Title": "300",
+"Year": "2006",
+"Rated": "R",
+"Studio": "C"
+},
+{
+"Title": "The Avengers",
+"Year": "2012",
+"Rated": "PG13",
+"Studio": "D"
+},
+{
+"Title": "The Wolf of Wall Street",
+"Year": "2013",
+"Rated": "R",
+"Studio": "E"
+},
+{
+"Title": "Interstellar",
+"Year": "2014",
+"Rated": "PG13",
+"Studio": "F"
+},
+{
+"Title": "Game of Thrones",
+"Year": "2011–",
+"Rated": "TV-MA",
+"Studio": "G"
+},
+{
+"Title": "Vikings",
+"Year": "2013–",
+"Rated": "TV-14",
+"Studio": "H"
+},
+{
+"Title": "Gotham",
+"Year": "2014–",
+"Rated": "TV-14",
+"Studio": "I"
+},
+{
+"Title": "Power",
+"Year": "2014–",
+"Rated": "TV-MA",
+"Studio": "J"
+},
+{
+"Title": "Narcos",
+"Year": "2015–",
+"Rated": "TV-MA",
+"Studio": "K"
+},
+{
+"Title": "Breaking Bad",
+"Year": "2008–2013",
+"Rated": "TV-14",
+"Studio": "L"
+},
+{
+"Title": "Doctor Strange",
+"Year": "2016",
+"Rated": "N/A",
+"Studio": "M"
+},
+{
+"Title": "Rogue One: A Star Wars Story",
+"Year": "2016",
+"Rated": "N/A",
+"Studio": "N"
+},
+{
+"Title": "Assassin's Creed",
+"Year": "2016",
+"Rated": "N/A",
+"Studio": "O"
+},
+{
+"Title": "Luke Cage",
+"Year": "2016–",
+"Rated": "TV-MA",
+"Studio": "P"
+},
+{
+"Title": "Casino Royale",
+"Year": "2016",
+"Studio": "Eon Productions",
+"Rated": "PG13",
+}
+];
+var res = [];
+for (var i=0;i<flims.length;i++)
+{
+if (flims[i].Rated==="PG13"||flims[i].Rated==="N/A")
+{
+res.push(flims[i]);
+}
+}
+console.log(res);
+} 
+}    
+var s1 = new Movie("Casino Royale","Eon Productions","PG13");
+console.log(s1);
+var s2 = new Movie("Casino Royale","Eon Productions");
+console.log(s2);
+console.log(s1.getPG());

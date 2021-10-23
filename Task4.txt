@@ -1,0 +1,25 @@
+class uber{
+constructor(milesTraveled, pickupTime){
+this.milesTraveled=milesTraveled;
+this.pickupTime=pickupTime;
+}
+
+taxiFare(milesTraveled, pickupTime) {
+  var baseFare = 2.50;
+  var costPerMile = 2.00;
+  var nightSurcharge = 0.50; // 8pm to 6am, every night
+
+  var cost = baseFare + (costPerMile * milesTraveled);
+  
+  // add the nightSurcharge to the cost if it is after 
+  // 8pm or before 6am
+  if (pickupTime >= 20 || pickupTime < 6) {
+      cost += nightSurcharge;
+  }
+  
+return cost;
+}
+}
+var tripCost = new uber(5, 22);
+console.log(tripCost);
+console.log(tripCost.taxiFare(5,22));

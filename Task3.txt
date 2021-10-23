@@ -1,0 +1,16 @@
+class Person{
+    constructor(FirstName, LastName, Age) {
+        this.firstName = FirstName || "unknown";
+        this.lastName = LastName || "unknown";
+        this.age = Age || 25;
+        this.getFullName = function () {
+            return this.firstName + " " + this.lastName+" "+this.age;
+        };
+}
+}
+var person1 = new Person("James","Bond");
+console.log(person1.getFullName());
+
+var person2 = new Person("Tom","Paul",20);
+console.log(person2.getFullName());
+        
